@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   $.ajax({
+        url:'form.php',
+        type:'GET', 
+        data:"parameter=some_parameter",
+       success:function(data)
+       {
+              $("#thisdiv").html(data);
+           }
+    });
+});
+</script>
+</head>
+<body>
+<div id="thisdiv"></div>
+</body>
+</html>
